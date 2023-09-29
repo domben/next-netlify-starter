@@ -1,35 +1,388 @@
+@font-face {
+  font-family: 'Agenda';
+  src: url('/fonts/Agenda.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/Agenda.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/Agenda.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/Agenda.woff') format('woff'), /* Pretty Modern Browsers */
+  url('/fonts/Agenda.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('/fonts/Agenda.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Agenda-Bold';
+  src: url('/fonts/Agenda-Bold.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/Agenda-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/Agenda-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/Agenda-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('/fonts/Agenda-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('/fonts/Agenda-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gobold-Bold';
+  src: url('/fonts/Gobold-Bold.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/Gobold-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/Gobold-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/Gobold-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('/fonts/Gobold-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('/fonts/Gobold-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.25em;
+  font-family: "Agenda", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.25px;
 }
 
 * {
   box-sizing: border-box;
 }
 
-main {
-  padding: 5rem 0;
+p {
+  color: #fff;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.bg-black {
+  background-color: #231F20;
+}
+
+.wrapper-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/iphone-wrapper.png");
+  background-position: calc(50% + 2px) calc(50% + 2px);
+  background-repeat: no-repeat;
+}
+
+.wrapper-inner {
+  position: relative;
+  display: block;
+  width: 365px;
+  height: 780px;
+  background-color: #000;
+  border-radius: 48px;
+  overflow: hidden;
+}
+
+.scrollable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -15px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.content {
+  overflow: auto;
+}
+
+header {
+  position: relative;
+  padding: 30px 0;
+  background-image: linear-gradient(180deg, #8604FF -50%, #000 75%);
+  background-position: center -20%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/branch-background.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+}
+
+header > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.profile {
+  position: absolute;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.profile img {
+  width: 56px;
+  height: 56px;
+}
+
+.logo {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  min-height: 56px;
 }
 
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
+.branch-create {
+  position: relative;
+  padding-bottom: 15px;
 }
 
-.container {
-  height: 100vh;
+.branch-create-wrapper {
+  padding: 15px;
+  background-color: #231f20;
+}
+
+.branch-create-logo {
+  position: relative;
+  top: -45px;
+  text-align: center;
+}
+
+.branch-create-profile {
+  position: relative;
+  margin-top: -45px;
+  padding: 15px 0 30px 0;
+  text-align: center;
+}
+
+.branch-create-details {
+
+}
+
+.branch-create-details h1 {
+  font-family: "Gobold-Bold", Arial, Helvetica, sans-serif;
+  line-height: 25px;
+  font-size: 19px;
+  font-style: oblique;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.branch-create-details p {
+  text-align: center;
+}
+
+.branch-create-forms {
+  padding-top: 15px;
+}
+
+.wrapper-dashed {
+  padding: 15px;
+  border: 2px dashed #3a3a3a;
+  border-radius: 15px;
+}
+
+.generate-character {
+
+}
+
+.generate-character h2 {
+  line-height: 23px;
+  font-size: 17px;
+  font-family: "Agenda-Bold", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.generate-character a {
+  line-height: 17px;
+  font-size: 13px;
+  color: #727272;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.generate-character a:focus,
+.generate-character a:hover {
+  color: #fff;
+}
+
+.generated-characters {
+  margin: 0 17px 3rem 17px;
+}
+
+.generated-characters ul {
+  padding-left: 0;
+}
+
+.generated-characters ul li {
+  margin-bottom: 1rem;
+}
+
+.generated-characters ul li a {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  min-height: 56px;
+  padding: 12px 10px 8px 61px;
+  line-height: 24px;
+  font-family: "Agenda-Bold", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background-color: #0d0d0d;
+  background-image: url("/icons/pencil.png");
+  background-position: calc(100% - 15px) center;
+  background-repeat: no-repeat;
 }
+
+.generated-characters ul li a img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* Bootstrap Overrides Start */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #727272;
+}
+
+.nav-item {
+  flex: 1;
+}
+
+.nav-tabs .nav-link {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  line-height: 23px;
+  font-family: 'Agenda-Bold', Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  color: #727272;
+  letter-spacing: 0.5px;
+  border: none;
+  border-bottom: 5px solid transparent;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.nav-tabs .nav-link.active {
+  border-bottom: 5px solid #9537f9;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  color: #fff;
+  border-color: transparent;
+}
+
+.nav-tabs .nav-link.active:focus,
+.nav-tabs .nav-link.active:hover {
+  border-color: #9537f9;
+}
+
+.tab-content {
+  padding-top: 15px;
+}
+
+.form-control,
+.form-select,
+.form-label {
+  position: relative;
+  display: block;
+  padding: 15px 15px 11px 15px;
+  line-height: 23px;
+  font-family: "Agenda", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  color: #f2f3f3;
+  background-color: #3A3A3A;
+  border: none;
+  border-radius: 0;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23f2f3f3' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+input[type="file"].form-control {
+  padding: 13px 15px;
+}
+
+.form-label {
+  cursor: pointer;
+}
+
+.form-label + input[type="file"].form-control {
+  display: none;
+}
+
+.form-label-upload {
+  background-image: url("/icons/upload.png");
+  background-position: calc(100% - 15px) center;
+  background-repeat: no-repeat;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: #f2f3f3;
+  background-color: #3A3A3A;
+  box-shadow: none;
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+  color: #727272;
+  opacity: 1;
+}
+
+button[type="submit"] {
+  position: relative;
+  display: block;
+  min-width: 250px;
+  padding: 15px 45px 11px 45px;
+  line-height: 23px;
+  font-family: "Agenda-Bold", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #f2f3f3;
+  background-color: #9a33fd;
+  border: none;
+  border-radius: 0;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+button[type="submit"]:focus,
+button[type="submit"]:hover {
+  color: #9a33fd;
+  background-color: #f2f3f3;
+}
+/* Bootstrap Overrides End */
