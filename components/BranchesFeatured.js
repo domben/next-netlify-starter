@@ -2,9 +2,10 @@ import Carousel from "@components/Carousel";
 import History from "@components/History";
 import Stats from "@components/Stats";
 import {useState} from "react";
+import Link from "next/link";
 
 export default function BranchesFeatured() {
-  const [showCommits, setShowCommits] = useState(false);
+  const [showCommits, setShowCommits] = useState(true);
 
   return (
     <div className="branch">
@@ -47,6 +48,16 @@ export default function BranchesFeatured() {
               <span>unreal341</span> Pellentesque laoreet non dui sollicitudin vulputate.
             </div>
             <div className="date-or-time">18 minutes ago</div>
+          </div>
+        </div>
+        <div className="branch-commit-comments-add">
+          <div className="mb-3">
+            <textarea className="form-control" id="comment-add" placeholder="Comment..." rows="5"></textarea>
+          </div>
+          <div className="d-flex justify-content-center mb-3">
+            <Link href="/">
+              <button type="submit" className="w-100">Add comment</button>
+            </Link>
           </div>
         </div>
       </div>

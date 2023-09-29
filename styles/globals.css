@@ -563,6 +563,10 @@ header > .container {
   letter-spacing: 1px;
 }
 
+.branch-commit-comments-add {
+  padding-top: 20px;
+}
+
 .branch-commit-add {
   position: absolute;
   right: 5px;
