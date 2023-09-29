@@ -661,13 +661,13 @@ header > .container {
 }
 
 .branch-commit-add img {
-  opacity: 0.25;
+  opacity: 1;
   transition: opacity 0.25s ease;
   cursor: pointer
 }
 
 .branch-commit-add img:hover {
-  opacity: 1;
+  opacity: 0.75;
 }
 /* Branches End */
 
@@ -974,11 +974,11 @@ footer {
 }
 
 .footer-cta a {
-  opacity: 0.25;
+  opacity: 1;
   transition: opacity 0.25s ease;
 }
 
 .footer-cta a:hover {
-  opacity: 1;
+  opacity: 0.75;
 }
 /* Footer End */
