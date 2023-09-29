@@ -157,6 +157,11 @@ header > .container {
   min-height: 56px;
 }
 
+.logo img {
+  width: auto;
+  max-height: 56px;
+}
+
 .branch-create {
   position: relative;
   padding-bottom: 15px;
@@ -276,15 +281,24 @@ header > .container {
 
 .branch-commit {
   position: relative;
-  display: flex;
 }
 
 .branch-commit-status {
   position: relative;
+  display: flex;
+}
+
+.branch-commit-wrapper + .branch-commit-wrapper {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #727272;
+}
+
+.branch-commit-wrapper.open .branch-commit-status {
   width: 26px;
 }
 
-.branch-commit-wrapper .branch-commit-status::after {
+.branch-commit-wrapper .branch-commit::after {
   content: "";
   position: absolute;
   top: 22px;
@@ -297,18 +311,18 @@ header > .container {
   background-repeat: no-repeat;
 }
 
-.branch-commit-wrapper.open .branch-commit-status::after {
+.branch-commit-wrapper.open .branch-commit::after {
   top: 12px;
   background-image: url("/icons/branch-partial.png");
 }
 
-.branch-commit-wrapper.open .branch-commit-status::before {
+.branch-commit-wrapper.open .branch-commit::before {
   content: "";
   position: absolute;
   width: 2px;
   height: calc(100% - 26px);
   top: 26px;
-  left: calc(50% - 1px);
+  left: 12px;
   background-color: #9537F9;
 }
 
@@ -418,18 +432,64 @@ header > .container {
   height: 26px;
 }
 
-.branch-commit-details {
-  flex: 1;
-  padding-left: 5px;
-}
-
-.branch-commit-details-profile {
-  padding: 4px 0 0 0;
+.branch-commit-status-profile {
+  padding: 4px 0 0 5px;
   line-height: 22px;
   font-family: "Agenda-Bold", Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #fff;
   letter-spacing: 1px;
+}
+
+.branch-commit-status-actions {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.branch-commit-status-actions-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.branch-commit-status-actions-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.branch-commit-status-actions-item svg path {
+  fill: #fff;
+  transition: fill 0.25s ease;
+}
+
+.branch-commit-status-actions-item:hover svg path {
+  fill: #9537f9;
+}
+
+.branch-commit-status-actions-item span {
+  padding: 3px 0 0 5px;
+  line-height: 21px;
+  font-size: 15px;
+  color: #f2f2f3;
+  letter-spacing: 0.25px;
+  transition: color 0.25s ease;
+}
+
+.branch-commit-status-actions-item:hover span {
+  color: #9537f9;
+}
+
+.branch-commit-status-actions-group .branch-commit-status-actions-item {
+  margin-left: 10px;
+}
+
+.branch-commit-details {
 }
 
 .branch-commit-details-graphics {
@@ -463,7 +523,7 @@ header > .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 15px 0 15px 30px;
 }
 
 .branch-commit-details-stats-stat {
@@ -496,8 +556,16 @@ header > .container {
  color: #9537f9;
 }
 
+.branch-commit-details-content {
+  position: relative;
+}
+
+.branch-commit-wrapper.open .branch-commit-details-content {
+  padding-left: 30px;
+}
+
 .branch-commit-details-content h2 {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   line-height: 22px;
   font-family: "Agenda-Bold", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -505,11 +573,25 @@ header > .container {
   letter-spacing: 1px;
 }
 
+.branch-commit-details-content.content-preview h2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .branch-commit-details-content p {
   line-height: 21px;
   font-size: 15px;
   color: #fff;
   letter-spacing: 0.25px;
+}
+
+.branch-commit-details-content.content-preview p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .date-or-time {
@@ -617,6 +699,7 @@ header > .container {
   font-size: 15px;
   color: #ccc;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .preview-title a:before {

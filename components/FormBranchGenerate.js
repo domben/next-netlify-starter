@@ -12,33 +12,48 @@ export default function FormBranchGenerate() {
       <div className="mb-3">
         <select className="form-select" aria-label="generate-story-type">
           <option>Choose type</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option value="prose">Prose</option>
+          <option value="graphic-novel">Graphic Novel</option>
+          <option value="video">Video</option>
+          <option value="game">Game</option>
         </select>
       </div>
       <div className="mb-3">
         <select className="form-select" aria-label="generate-story-pages">
           <option># Pages</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
         </select>
       </div>
       <div className="mb-3">
         <select className="form-select" aria-label="generate-story-genre">
           <option>Genre</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option value="funny">Funny</option>
+          <option value="fun">Fun</option>
+          <option value="calm">Calm</option>
+          <option value="dramatic">Dramatic</option>
+          <option value="romantic">Romantic</option>
+          <option value="fantasy">Fantasy</option>
         </select>
       </div>
       <div className="mb-3">
         <select className="form-select" aria-label="generate-story-environment">
           <option>Environment</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option value="trunk">Maintain from trunk</option>
+          <option value="space">Space</option>
+          <option value="country">Country</option>
+          <option value="city">City</option>
+          <option value="beach">Beach</option>
+          <option value="forest">Forest</option>
+          <option value="other">Other</option>
         </select>
       </div>
       <div className="generate-character wrapper-dashed mb-3">
@@ -65,7 +80,7 @@ export default function FormBranchGenerate() {
           <li>
             <a href="#">
               <img src="/characters/character-2.png" alt="Character 2" width="36" height="36" />
-              Priscilla
+              Marty
             </a>
           </li>
         </ul>

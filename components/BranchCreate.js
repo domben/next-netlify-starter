@@ -15,8 +15,8 @@ export default function BranchCreate() {
                 <img src="/profile.png" alt="Branch Profile" width="86" height="86" />
               </div>
               <div className="branch-create-details">
-                <p>You are about to create a story brand from:</p>
-                <h1>AREA15's It Begins: Chapter 1</h1>
+                <p>You are about to create a branch from:</p>
+                <h1>AREA15's It Begins</h1>
               </div>
               <div className="branch-create-forms">
                 <ul className="nav nav-tabs" id="branch-create-forms-tab" role="tablist">

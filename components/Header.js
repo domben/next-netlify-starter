@@ -1,4 +1,6 @@
-export default function Header({ title }) {
+import Link from "next/link";
+
+export default function Header() {
   return (
     <header>
       <div className="container">
@@ -8,9 +10,11 @@ export default function Header({ title }) {
               <img src="/profile.png" alt="Storyverse User Profile" />
             </div>
             <div className="logo">
-              <a href="/">
-                <img src="/logo.png" alt="Storyverse Logo" />
-              </a>
+              <Link href="/">
+                <a href="/">
+                  <img src="/logo.png" alt="Storyverse Logo" />
+                </a>
+              </Link>
             </div>
           </div>
         </div>

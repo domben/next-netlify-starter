@@ -9,22 +9,24 @@ export default function PreviewStory() {
         <div className="row">
           <div className="col">
             <div className="preview-title">
-              <h1>Story Preview: Story name</h1>
+              <h1>Story Preview: Mega Marty of the Multiverse</h1>
               <Link href="/generate">
                 <a href="/generate">Make edits</a>
               </Link>
             </div>
             <div className="preview-intro">
               <p>Reminder: This story is a branch from</p>
-              <a href="#">AREA15: It Begins Chapter 1</a>
+              <Link href="/details">
+                <a href="/details">AREA15: It Begins</a>
+              </Link>
             </div>
             <div className="preview-details">
               <div className="preview-details-graphics">
-                <Carousel linkTo="" />
+                <Carousel id="gallery-marty" images={["/gallery/marty-1.jpg","/gallery/marty-2.jpg","/gallery/marty-3.jpg","/gallery/marty-4.jpg","/gallery/marty-5.jpg","/gallery/marty-6.jpg","/gallery/marty-7.jpg","/gallery/marty-8.jpg"]} linkTo="" />
               </div>
               <div className="preview-details-content">
-                <h2>Regular Day at the office for Marty...</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur quam urna, ac placerat arcu eleifend at. Quisque ut sapien et est molestie mattis. Donec vestibulum egestas lorem, et lobortis metus congue sit amet. Nulla ex diam, ullamcorper eget tortor eu, vestibulum aliquet turpis.</p>
+                <h2>Mega Marty of the Multiverse</h2>
+                <p>An explosion of Particle A15 turns a high powered corner office New York executive named Marty into a super hero of the multiverse.</p>
               </div>
             </div>
             <div className="d-flex justify-content-center mb-3">

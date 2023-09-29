@@ -13,21 +13,18 @@ export default function BranchesDetails() {
               <div className="branch-commit">
                 <div className="branch-commit-status">
                   <img src="/characters/character-2.png" alt="Character 2" width="36" height="36" />
+                  <div className="branch-commit-status-profile">AREA15</div>
                 </div>
                 <div className="branch-commit-details">
-                  <div className="branch-commit-details-profile">Haley15</div>
                   <div className="branch-commit-details-graphics">
-                    <Carousel linkTo="" />
-                    <div className="branch-commit-details-graphics-caption">
-                      <p>For Marty, it was just another day at the office when...</p>
-                    </div>
+                    <Carousel id="gallery-it-begins" images={["/gallery/it-begins-1.jpg","/gallery/it-begins-2.jpg","/gallery/it-begins-3.jpg","/gallery/it-begins-4.jpg","/gallery/it-begins-5.jpg"]} linkTo="/generate" />
                   </div>
                   <div className="branch-commit-details-stats">
                     <Stats numBranches="212" numComments="8" numLikes="45k" />
                   </div>
                   <div className="branch-commit-details-content">
-                    <h2>Regular Day at the office for Marty...</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur quam urna, ac placerat arcu eleifend at. Quisque ut sapien et est molestie mattis. Donec vestibulum egestas lorem, et lobortis metus congue sit amet. Nulla ex diam, ullamcorper eget tortor eu, vestibulum aliquet turpis.</p>
+                    <h2>It Begins</h2>
+                    <p>An explosion of pure Particle A15 transformed this place into something spectacular. Now, we have to protect it.</p>
                   </div>
                   <div className="date-or-time">45 minutes ago</div>
                 </div>
