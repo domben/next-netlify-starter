@@ -1,4 +1,6 @@
-export default function Carousel() {
+import Link from "next/link";
+
+export default function Carousel({showAdd}) {
   return(
     <div id="branch-commit-carousel" className="carousel slide">
       <div className="carousel-indicators">
@@ -28,6 +30,13 @@ export default function Carousel() {
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
+      {
+        showAdd ? <div className="branch-commit-add">
+          <Link href="/generate">
+            <img src="/branch.png" alt="Branch" width="58" height="58" />
+          </Link>
+        </div> : <></>
+      }
     </div>
   );
 }

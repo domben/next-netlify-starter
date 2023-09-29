@@ -16,7 +16,7 @@ export default function BranchesFeatured() {
           <div className="branch-commit-details">
             <div className="branch-commit-details-profile">Haley15</div>
             <div className="branch-commit-details-graphics">
-              <Carousel />
+              <Carousel showAdd={true} />
               <div className="branch-commit-details-graphics-caption">
                 <p>For Marty, it was just another day at the office when...</p>
               </div>

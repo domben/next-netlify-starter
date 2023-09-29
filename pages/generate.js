@@ -13,7 +13,6 @@ export default function Home() {
               <title>Storyverse - Generate</title>
               <link rel="icon" href="/favicon.ico" />
             </Head>
-
             <main>
               <Header />
               <BranchCreate />

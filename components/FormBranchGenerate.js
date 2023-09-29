@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FormBranchGenerate() {
   return (
     <>
@@ -9,7 +11,23 @@ export default function FormBranchGenerate() {
       </div>
       <div className="mb-3">
         <select className="form-select" aria-label="generate-story-type">
-          <option>Story type</option>
+          <option>Choose type</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div className="mb-3">
+        <select className="form-select" aria-label="generate-story-pages">
+          <option># Pages</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div className="mb-3">
+        <select className="form-select" aria-label="generate-story-genre">
+          <option>Genre</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
@@ -18,14 +36,6 @@ export default function FormBranchGenerate() {
       <div className="mb-3">
         <select className="form-select" aria-label="generate-story-environment">
           <option>Environment</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-      <div className="mb-3">
-        <select className="form-select" aria-label="generate-story-length">
-          <option>Length</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
@@ -61,7 +71,9 @@ export default function FormBranchGenerate() {
         </ul>
       </div>
       <div className="d-flex justify-content-center">
-        <button type="submit">Generate story</button>
+        <Link href="/preview">
+          <button type="submit">Generate story</button>
+        </Link>
       </div>
     </>
   );

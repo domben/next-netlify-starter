@@ -1,7 +1,7 @@
-import Feeds from "@components/Feeds";
-import Footer from '@components/Footer'
 import Head from 'next/head'
 import Header from '@components/Header'
+import Footer from '@components/Footer'
+import PreviewStory from "@components/PreviewStory";
 
 export default function Home() {
   return (
@@ -10,16 +10,16 @@ export default function Home() {
         <div className="scrollable">
           <div className="content">
             <Head>
-              <title>Storyverse</title>
+              <title>Storyverse - Preview Story</title>
               <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
               <Header />
-              <Feeds />
+              <PreviewStory />
             </main>
           </div>
         </div>
-        <Footer activeLink="home" numNotifications="3" />
+        <Footer activeLink="generate" numNotifications="3" />
       </div>
     </div>
   )
