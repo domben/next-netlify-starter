@@ -20,7 +20,7 @@ export default function PreviewStory() {
             </div>
             <div className="preview-details">
               <div className="preview-details-graphics">
-                <Carousel showAdd={false} />
+                <Carousel linkTo="" />
               </div>
               <div className="preview-details-content">
                 <h2>Regular Day at the office for Marty...</h2>
