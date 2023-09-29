@@ -31,6 +31,17 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Komika';
+  src: url('/fonts/Komika.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/Komika.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/Komika.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/Komika.woff') format('woff'), /* Pretty Modern Browsers */
+  url('/fonts/Komika.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('/fonts/Komika.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
+
 
 html,
 body {
@@ -95,13 +106,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content {
+  padding-bottom: 94px;
   overflow: auto;
 }
 
 header {
   position: relative;
   padding: 30px 0;
-  background-image: linear-gradient(180deg, #8604FF -50%, #000 75%);
+  background-image: linear-gradient(180deg, #8604ff -50%, #000 75%);
   background-position: center -20%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -257,6 +269,301 @@ header > .container {
   left: 10px;
 }
 
+/* Branches Start */
+.branch {
+
+}
+
+.branch-commit {
+  position: relative;
+  display: flex;
+}
+
+.branch-commit-status {
+  position: relative;
+  width: 26px;
+}
+
+.branch-commit-wrapper .branch-commit-status::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: -2px;
+  width: 18px;
+  height: 44px;
+  background-color: transparent;
+  background-image: url("/icons/branch.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.branch-commit-wrapper.open .branch-commit-status::after {
+  top: 12px;
+  background-image: url("/icons/branch-partial.png");
+}
+
+.branch-commit-wrapper.open .branch-commit-status::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 26px);
+  top: 26px;
+  left: calc(50% - 1px);
+  background-color: #9537F9;
+}
+
+.branch-commit-history {
+  position: relative;
+  padding-top: 30px;
+}
+
+.branch-commit-history:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  top: 0;
+  left: 12px;
+  background-color: #9537F9;
+}
+
+.branch-commit-history-item {
+  position: relative;
+  padding: 5px 0 0 31px;
+}
+
+.branch-commit-history-item:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 12px;
+  background-color: #9537F9;
+}
+
+.branch-commit-history-item:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -2px;
+  width: 18px;
+  height: 44px;
+  background-color: transparent;
+  background-image: url("/icons/branch-partial.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.branch-commit-history .branch-commit-history-item:last-of-type:before {
+  height: 50%;
+}
+
+.branch-commit-history .branch-commit-history-item:last-of-type:after {
+  top: 28px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #9537F9;
+  background-image: none;
+  border-radius: 50%;
+}
+
+.branch-commit-history-item-details {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-height: 56px;
+  padding: 12px 10px 8px 61px;
+  text-decoration: none;
+  background-color: #231F20;
+  background-image: url("/icons/fork.png");
+  background-position: calc(100% - 32px) center;
+  background-repeat: no-repeat;
+}
+
+.branch-commit-history-item-details:before {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  top: 27px;
+  left: -15px;
+  background-color: #9537F9;
+}
+
+.branch-commit-history-item-details span {
+  line-height: 24px;
+  font-family: "Agenda", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #727272;
+  letter-spacing: 1px;
+}
+
+.branch-commit-history-item-details span:last-of-type {
+  color: #9537f9;
+}
+
+.branch-commit-history-item-details img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.branch-commit-status img {
+  width: 26px;
+  height: 26px;
+}
+
+.branch-commit-details {
+  flex: 1;
+  padding-left: 5px;
+}
+
+.branch-commit-details-profile {
+  padding: 4px 0 0 0;
+  line-height: 22px;
+  font-family: "Agenda-Bold", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.branch-commit-details-graphics {
+  position: relative;
+  margin-top: 15px;
+}
+
+.branch-commit-details-graphics-caption {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  max-width: 220px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+.branch-commit-details-graphics-caption p {
+  line-height: 18px;
+  font-family: "Komika", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.branch-commit-details-graphics-caption p:last-of-type {
+  margin-bottom: 0;
+}
+
+.branch-commit-details-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.branch-commit-details-stats-stat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.branch-commit-details-stats-stat svg path {
+  fill: #fff;
+  transition: fill 0.25s ease;
+}
+
+.branch-commit-details-stats-stat:hover svg path {
+  fill: #9537f9;
+}
+
+.branch-commit-details-stats-stat span {
+  padding: 3px 0 0 5px;
+  line-height: 21px;
+  font-size: 15px;
+  color: #f2f2f3;
+  letter-spacing: 0.25px;
+  transition: color 0.25s ease;
+}
+
+.branch-commit-details-stats-stat:hover span {
+ color: #9537f9;
+}
+
+.branch-commit-details-content h2 {
+  padding-bottom: 10px;
+  line-height: 22px;
+  font-family: "Agenda-Bold", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.branch-commit-details-content p {
+  line-height: 21px;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 0.25px;
+}
+
+.date-or-time {
+  line-height: 16px;
+  font-size: 12px;
+  color: #727272;
+}
+
+.branch-commit-comments {
+  margin-top: 3rem;
+}
+
+.branch-commit-comments h3 {
+  line-height: 22px;
+  font-family: "Agenda-Bold", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #727272;
+  letter-spacing: 1px;
+}
+
+.branch-commit-comment {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 56px;
+  padding: 10px 0 10px 46px;
+  border-top: 1px solid #727272;
+}
+
+.branch-commit-comment img {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 36px;
+  height: 36px;
+}
+
+.branch-commit-comments .branch-commit-comment:nth-of-type(1) {
+  border-top: none;
+}
+
+.branch-commit-comment-content {
+  padding-bottom: 5px;
+  line-height: 18px;
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.branch-commit-comment-content span {
+  font-family: "Agenda-Bold", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+}
+/* Branches End */
+
 /* Bootstrap Overrides Start */
 .nav-tabs {
   display: flex;
@@ -385,4 +692,86 @@ button[type="submit"]:hover {
   color: #9a33fd;
   background-color: #f2f3f3;
 }
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  margin-right: 7.5px;
+  margin-left: 7.5px;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 50%;
+}
 /* Bootstrap Overrides End */
+
+/* Footer Start */
+footer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px 45px;
+  background-color: #000;
+  border-top: 1px solid #727272;
+  z-index: 9;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(50% - 44px);
+}
+
+.footer-links a {
+  position: relative;
+}
+
+.footer-links a.notifications span {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  width: 16px;
+  height: 16px;
+  padding: 3px 0 0 0;
+  line-height: 13px;
+  font-family: "Agenda-Bold", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  background-color: #ab61fa;
+  border-radius: 50%;
+}
+
+.footer-links a svg path {
+  fill: #727272;
+  transition: fill 0.25s ease;
+}
+
+.footer-links a.active svg path,
+.footer-links a:hover svg path {
+  fill: #fff;
+}
+
+.footer-cta {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 58px;
+  height: 58px;
+  background-color: #9537f9;
+  border-radius: 29px;
+  transform: translateX(-50%);
+}
+
+.footer-cta a {
+  opacity: 0.25;
+  transition: opacity 0.25s ease;
+}
+
+.footer-cta a:hover {
+  opacity: 1;
+}
+/* Footer End */

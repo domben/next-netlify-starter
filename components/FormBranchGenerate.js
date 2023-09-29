@@ -9,7 +9,7 @@ export default function FormBranchGenerate() {
       </div>
       <div className="mb-3">
         <select className="form-select" aria-label="generate-story-type">
-          <option selected>Story type</option>
+          <option>Story type</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
@@ -17,7 +17,7 @@ export default function FormBranchGenerate() {
       </div>
       <div className="mb-3">
         <select className="form-select" aria-label="generate-story-environment">
-          <option selected>Environment</option>
+          <option>Environment</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
@@ -25,7 +25,7 @@ export default function FormBranchGenerate() {
       </div>
       <div className="mb-3">
         <select className="form-select" aria-label="generate-story-length">
-          <option selected>Length</option>
+          <option>Length</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
