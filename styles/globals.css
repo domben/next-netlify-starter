@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   left: 0;
-  right: -15px;
+  right: 0;
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -140,6 +140,7 @@ header > .container {
 
 .profile {
   position: absolute;
+  top: 10px;
   max-width: 100%;
   overflow: hidden;
 }
@@ -155,11 +156,12 @@ header > .container {
   align-items: center;
   justify-content: center;
   min-height: 56px;
+  padding-left: 56px;
 }
 
 .logo img {
   width: auto;
-  max-height: 56px;
+  max-height: 76px;
 }
 
 .branch-create {
