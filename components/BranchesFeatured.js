@@ -78,7 +78,7 @@ export default function BranchesFeatured() {
             </div>
             <div className="mt-3 branch-commit-details-content content-preview">
               <h2>Adventures of the Rave Team</h2>
-              <p>Pellentesque efficitur blandit vehicula. Vestibulum aliquet, nibh eu interdum fringilla, est urna efficitur nunc, non iaculis elit metus vitae urna.</p>
+              <p>Their parents sent them through The Breach to conquer Earth. They've decided to conquer the electronic music scene instead.</p>
             </div>
           </div>
         </div>
